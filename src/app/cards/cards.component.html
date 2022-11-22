@@ -1,0 +1,20 @@
+<div id="{{item.img}}" class="card_parent">
+<div class="cards" >
+  <img src='{{item.img}}' alt="">
+  <p class="category">{{item.category}}</p>
+  <div class="flex">
+    <p class="cards_name">{{item.name}}</p>
+    <div  id="{{item.id}}" >
+      <img (click)="onLIke()" class="images" *ngIf="!item.liked" src="./assets/no-liked.png" alt="">
+      <img  (click)="onLIke()"  class="images" *ngIf="item.liked" src="./assets/liked.png" alt="">
+    </div>
+
+  </div>
+
+  <p class="price">{{item.price}}</p>
+  <div class="card_btn_block flex">
+    <button class="buy">Գնել</button>
+    <button class = 'match'>Համեմատել </button>
+  </div>
+</div>
+</div>

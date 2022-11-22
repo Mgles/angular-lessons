@@ -1,5 +1,13 @@
-<div>hello world</div>
+<app-header class="container"></app-header>
+<div class="hot_price container flex">
 
-<app-about *ngFor="let item of names" [name] = "item">{{item}}</app-about>
+<app-cards  *ngFor="let item of cards" [item] = 'item' ></app-cards>
+</div>
+<div class="container middle_img">
+  <img src="https://www.zigzag.am/media/mageplaza/bannerslider/banner/image/k/-/k-array_940x170_am.jpg" alt="">
 
-
+</div>
+<p>Նորույթներ</p>
+<div class="news container flex">
+<app-cards *ngFor="let item of cards" (myClick)="likeCard(item.id)"  [item]='item'></app-cards>
+</div>
